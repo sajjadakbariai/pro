@@ -113,7 +113,522 @@ css/
 └── main.css   (فایل نهایی که همه فایل‌ها را ایمپورت می‌کند)
 
 ```
+
 ---
+
+css/base/
+
+reset.css
+
+استایل‌های پایه:
+
+html, body, h1-h6, p, a, ul, ol, li, blockquote, table, form, input, textarea, img, iframe, hr, address, و همچنین
+
+* { box-sizing: border-box; }
+
+
+
+typography.css
+
+استایل تایپوگرافی:
+
+فونت خانواده، اندازه‌ها، وزن‌ها (h1 تا h6, p, small, blockquote, code, pre)
+
+رنگ متن‌های اصلی و ثانویه
+
+
+
+elements.css
+
+استایل المنت‌های HTML:
+
+استایل عمومی hr, img, figure, figcaption, iframe, embed, object, video
+
+
+
+forms.css
+
+عناصر فرم:
+
+form, fieldset, legend, label, input, textarea, select, button
+
+
+
+tables.css
+
+عناصر جدول:
+
+table, thead, tbody, tr, th, td
+
+
+
+
+
+---
+
+css/settings/
+
+variables.css
+
+همه‌ی متغیرها با :root تعریف شود:
+
+رنگ‌ها، فونت‌ها، سایز فونت، فاصله‌ها، شعاع گوشه‌ها، زینکس، انیمیشن‌ها و سایه‌ها
+
+
+
+themes.css
+
+استایل‌های تغییر تم:
+
+[data-theme="light"], [data-theme="dark"], [data-theme="high-contrast"]
+
+کلاس‌های .theme-corporate, .theme-modern, .theme-minimal
+
+
+
+
+
+---
+
+css/layout/
+
+container.css
+
+.container, .container-fluid, .container-narrow, .container-wide
+
+
+grid.css
+
+ساختار grid:
+
+.grid, .row, .col, سیستم 12 ستونه
+
+
+
+flex.css
+
+کلاس‌های فلکس:
+
+.flex, .flex-center, .flex-between, .flex-end, .flex-column, .flex-wrap
+
+
+
+section.css
+
+ساختار بخش‌بندی:
+
+.section, .section-header, .section-body
+
+
+
+wrapper.css
+
+پیچیدن محتوا:
+
+.wrapper, .content-wrapper, .section-wrapper
+
+
+
+row-col.css
+
+کلاس‌های اضافی ردیف و ستون:
+
+.row, .col-{1-12}, .col-auto, .col-md-6, .col-lg-4 و ریسپانسیو
+
+
+
+media-queries.css
+
+فقط مدیا کوئری‌ها:
+
+سایزبندی موبایل، تبلت، دسکتاپ (640px, 768px, 1024px, 1280px, 1536px) + استایل‌های چاپی
+
+
+
+
+
+---
+
+css/components/
+
+(هر فایل مخصوص کامپوننت جداگانه)
+
+مثلا:
+
+form.css
+
+.form-group, .form-control, .form-label, .form-select, .form-check, .form-range, .form-text, .input-group, .floating-label
+
+
+button.css
+
+.btn, .btn-primary, .btn-outline-primary, .btn-sm, .btn-lg, .btn-block, .btn-loading
+
+
+card.css
+
+.card, .card-header, .card-body, .card-footer, .card-title, .card-subtitle, .card-horizontal
+
+
+navbar.css
+
+.navbar, .navbar-brand, .navbar-toggler, .navbar-collapse, .nav, .nav-item, .nav-link
+
+
+dropdown.css
+
+.dropdown, .dropdown-toggle, .dropdown-menu, .dropdown-item
+
+
+breadcrumb.css
+
+.breadcrumb, .breadcrumb-item
+
+
+pagination.css
+
+.pagination, .page-item, .page-link
+
+
+tabs.css
+
+.tab, .tab-content, .tab-pane
+
+
+alerts.css
+
+.alert, .alert-success, .alert-dismissible
+
+
+toast.css
+
+.toast, .toast-container
+
+
+badge-tooltip-popover.css
+
+.badge, .tooltip, .popover
+
+
+modal.css
+
+.modal, .modal-dialog, .modal-content, .modal-header, .modal-body, .modal-footer
+
+
+accordion.css
+
+.accordion, .accordion-item, .accordion-header, .accordion-collapse
+
+
+carousel-slider.css
+
+.carousel, .carousel-inner, .carousel-item, .slider
+
+
+table.css
+
+.table, .table-striped, .table-bordered, .table-hover, .table-responsive
+
+
+
+
+---
+
+css/utilities/
+
+text.css
+
+.text-center, .text-left, .text-right, .text-{primary, secondary, success, warning, danger}
+
+
+background.css
+
+.bg-primary, .bg-secondary, .bg-success, .bg-warning, .bg-danger, .bg-light, .bg-dark
+
+
+margin-padding.css
+
+.m-{0,1,2,3,4,5}, .p-{0,1,2,3,4,5}, .mx-auto, .px-3
+
+
+width-height.css
+
+.w-100, .w-auto, .h-100, .h-auto
+
+
+display.css
+
+.d-block, .d-inline, .d-inline-block, .d-flex, .d-none
+
+
+alignment.css
+
+.align-items-center, .justify-content-between, .justify-content-center
+
+
+border-radius.css
+
+.rounded, .rounded-sm, .rounded-lg, .rounded-full
+
+
+shadow.css
+
+.shadow-sm, .shadow-md, .shadow-lg
+
+
+opacity.css
+
+.opacity-0, .opacity-50, .opacity-100
+
+
+
+
+---
+
+css/state/
+
+states.css
+
+.is-active, .is-disabled, .is-loading, .is-selected, .is-expanded, .is-hidden, .is-scrolled, .is-sticky
+
+
+
+
+---
+
+css/animations/
+
+keyframes.css
+
+@keyframes fadeIn, fadeOut, slideInUp, slideInLeft, zoomIn, bounce, pulse
+
+
+animation-classes.css
+
+.animate-fade, .animate-slide, .animate-zoom, .animate-spin, .animate-pulse
+
+
+transitions.css
+
+.transition-all, .transition-colors, .transition-opacity, .transition-fast, .transition-medium, .transition-slow
+
+
+
+
+---
+
+css/accessibility/
+
+accessibility.css
+
+.sr-only, .skip-link, :focus-visible, [aria-*], .high-contrast
+
+
+
+
+---
+
+css/cms/
+
+editor.css
+
+.editor-toolbar, .editor-content
+
+
+media-library.css
+
+.media-library, .media-item
+
+
+content-block.css
+
+.content-block, .block-title, .block-content
+
+
+
+
+---
+
+css/ecommerce/
+
+product-card.css
+
+.product-card, .product-title, .product-price, .add-to-cart
+
+
+price.css
+
+.price, .old-price, .new-price
+
+
+cart.css
+
+.cart-summary, .cart-item, .cart-total
+
+
+checkout.css
+
+.checkout-steps, .checkout-form
+
+
+gallery.css
+
+.product-gallery, .gallery-thumb
+
+
+product-variants.css
+
+.product-variants, .variant-option
+
+
+
+
+---
+
+css/dashboard/
+
+dashboard-layout.css
+
+.dashboard-layout, .dashboard-header, .dashboard-content
+
+
+sidebar.css
+
+.sidebar, .sidebar-item, .sidebar-link
+
+
+stat-card.css
+
+.stat-card, .stat-value, .stat-label
+
+
+data-grid.css
+
+.data-grid, .data-cell
+
+
+user-avatar.css
+
+.user-avatar, .avatar-sm, .avatar-lg
+
+
+activity-log.css
+
+.activity-log, .activity-item
+
+
+
+
+---
+
+css/blog/
+
+article.css
+
+.article-header, .article-content
+
+
+author-bio.css
+
+.author-bio, .author-name
+
+
+related-posts.css
+
+.related-posts, .related-post-item
+
+
+comments.css
+
+.comment-section, .comment
+
+
+tag-cloud.css
+
+.tag-cloud, .tag
+
+
+
+
+---
+
+css/optimization/
+
+lazy-load.css
+
+.lazy-load, .lazy-image
+
+
+skeleton.css
+
+.skeleton, .skeleton-text, .skeleton-image
+
+
+critical-css.css
+
+فقط استایل‌های ضروری برای بارگذاری اولیه صفحه
+
+
+print.css
+
+.print-only, .no-print
+
+
+
+
+---
+
+css/interactive/
+
+drag-drop.css
+
+.drag-drop, .dragging
+
+
+sortable-list.css
+
+.sortable-list, .sortable-item
+
+
+resizable.css
+
+.resizable
+
+
+tour.css
+
+.interactive-tour, .tour-step
+
+
+real-time-update.css
+
+.real-time-update, .live-indicator
+
+
+context-menu.css
+
+.context-menu, .context-item
+
+
+hotkeys.css
+
+.hotkeys-hint, .hotkeys-active
+
+
+
+
+---
+
+css/main.css
+
+تمام فایل‌های بالا را در این فایل ایمپورت می‌کنید.
+(به ترتیب درست: reset, base, settings, layout, components, utilities, state, animations, accessibility, cms, ecommerce, dashboard, blog, optimization, interactive)
+
+
+
+---
+
+
 
 پوشه js/
 ```
