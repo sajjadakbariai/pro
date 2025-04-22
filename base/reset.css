@@ -1,0 +1,182 @@
+/* 
+    توضیحات: ریست فوق حرفه‌ای + بهینه‌سازی برای RTL/LTR، ریسپانسیو پایه، تایپوگرافی، موبایل فرندلی و دسترسی‌پذیری
+*/
+
+/* ریشه: متغیرهای پایه */
+:root {
+    --base-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --base-font-size: 16px;
+    --base-line-height: 1.5;
+    --base-text-color: #2c3e50;
+    --base-background-color: #ffffff;
+    --base-direction: rtl; /* مقدار پیش‌فرض: راست به چپ */
+}
+
+/* تنظیمات حالت LTR یا RTL دینامیک */
+html[dir="ltr"] {
+    direction: ltr;
+}
+
+html[dir="rtl"] {
+    direction: rtl;
+}
+
+/* ریست کلی همه المنت‌ها */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* تنظیمات پایه برای بدنه صفحه */
+html, body {
+    height: 100%;
+    width: 100%;
+    min-width: 320px; /* حداقل عرض ریسپانسیو */
+    font-family: var(--base-font-family);
+    font-size: var(--base-font-size);
+    line-height: var(--base-line-height);
+    color: var(--base-text-color);
+    background-color: var(--base-background-color);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+}
+
+/* ریست عنوان‌ها */
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    color: inherit;
+}
+
+/* پاراگراف و متن */
+p, span, strong, em, small {
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+}
+
+/* ریست لینک‌ها */
+a {
+    color: inherit;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+/* لیست‌ها */
+ul, ol, menu {
+    list-style: none;
+}
+
+/* لیست آیتم */
+li {
+    list-style: none;
+}
+
+/* تصاویر و رسانه‌ها */
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* فرم‌ها */
+form, input, textarea, select, button, label, fieldset, legend {
+    font: inherit;
+    color: inherit;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+/* دکمه */
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* جدول‌ها */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+
+th, td {
+    text-align: inherit;
+    font-weight: normal;
+}
+
+/* دیالوگ و المنت‌های جدید */
+dialog {
+    border: none;
+    background: none;
+    padding: 0;
+}
+
+/* ریست انیمیشن‌ها و ترنزیشن‌ها */
+* {
+    animation: none !important;
+    transition: none !important;
+}
+
+/* فوکوس برای دسترسی بهتر */
+:focus {
+    outline: none;
+}
+
+:focus-visible {
+    outline: 2px dashed var(--base-text-color);
+    outline-offset: 4px;
+}
+
+/* بهبود لمس موبایل */
+html {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* ریست فونت برای کد و پره فورمات */
+code, pre {
+    font-family: 'Courier New', Courier, monospace;
+    background: none;
+}
+
+/* اسکرول بار زیباسازی */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+/* واکنش‌گرایی (ریسپانسیو پایه) */
+@media (max-width: 768px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 14px;
+    }
+}
