@@ -1,0 +1,122 @@
+/* 
+    فایل: typography.css
+    توضیحات: استایل تایپوگرافی پیشرفته برای متن‌ها، عنوان‌ها، نقل قول‌ها و کدها
+*/
+
+/* تنظیمات ریشه برای تایپوگرافی */
+:root {
+    --font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --text-color: #2c3e50;
+    --heading-color: #1a252f;
+    --blockquote-color: #555;
+    --code-background: #f5f5f5;
+    --code-color: #c0392b;
+}
+
+/* تنظیمات پایه متن */
+body {
+    font-family: var(--font-family-base);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+/* استایل عنوان‌ها */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--heading-color);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 0.9rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+    margin-bottom: 0.8rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+    margin-bottom: 0.7rem;
+}
+
+h5 {
+    font-size: 1.25rem;
+    margin-bottom: 0.6rem;
+}
+
+h6 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* استایل پاراگراف */
+p {
+    margin-bottom: 1rem;
+}
+
+/* استایل نوشته کوچک */
+small {
+    font-size: 0.875rem;
+    color: #7f8c8d;
+}
+
+/* استایل بولد و ایتالیک */
+strong {
+    font-weight: bold;
+    color: var(--heading-color);
+}
+
+em {
+    font-style: italic;
+}
+
+/* استایل نقل قول */
+blockquote {
+    margin: 1.5rem 1rem;
+    padding: 1.5rem;
+    background-color: var(--code-background);
+    border-left: 5px solid var(--heading-color);
+    color: var(--blockquote-color);
+    font-style: italic;
+    border-radius: 0 4px 4px 0;
+}
+
+/* استایل کد درون متن */
+code {
+    background-color: var(--code-background);
+    color: var(--code-color);
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.95rem;
+}
+
+/* استایل بلوک کد */
+pre {
+    background-color: var(--code-background);
+    padding: 1rem;
+    overflow-x: auto;
+    border-radius: 8px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.95rem;
+    color: var(--code-color);
+    margin: 1.5rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* اطمینان از صحیح نمایش کدهای درون pre */
+pre code {
+    background: none;
+    padding: 0;
+    color: inherit;
+    font-size: inherit;
+}
