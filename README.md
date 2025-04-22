@@ -113,6 +113,133 @@ css/
 └── main.css   (فایل نهایی که همه فایل‌ها را ایمپورت می‌کند)
 
 ```
+آره کامل متوجه شدم چی میخوای —
+تو میخوای به صورت مرتب و تمیز یه ساختار جدید داشته باشی که جلوی هر فایل دقیقا نوشته بشه چی توشه، نه اینکه فقط کلی توضیح بدم.
+
+باشه، اینجوری برات مینویسم:
+(فرمت خیلی منظم، اول پوشه > فایل > توضیحاتش)
+
+
+---
+```
+css/
+
+│
+├── base/
+│   ├── reset.css — ریست تمام المنت‌های HTML (*, html, body, h1 تا h6, p, ul, li, img, table, form, و غیره)
+│   ├── typography.css — استایل تایپوگرافی (h1 تا h6, p, small, blockquote, code, pre)
+│   ├── elements.css — استایل المنت‌های پایه مثل hr, address, figure, figcaption, iframe
+│   ├── forms.css — استایل اولیه فرم‌ها (input, textarea, select, button, form-group, form-control)
+│   └── tables.css — استایل جداول (table, .table-striped, .table-bordered, .table-hover)
+
+├── settings/
+│   ├── variables.css — تعریف متغیرهای اصلی (--colors, --fonts, --spacing, --border-radius, --shadows, --z-index)
+│   ├── themes.css — تعریف تم‌ها ([data-theme="light"], [data-theme="dark"], [data-theme="high-contrast"], .theme-corporate, .theme-modern, .theme-minimal)
+
+├── layout/
+│   ├── container.css — استایل .container (fluid, fixed, narrow)
+│   ├── grid.css — سیستم گرید (.row, .col-6, .col-12, responsiveness)
+│   ├── flex.css — کلاس‌های utility فلکس (.flex, .flex-row, .flex-column, .justify-center)
+│   ├── section.css — استایل بندی سکشن‌های اصلی صفحات (.section, .section-header, .section-body)
+│   ├── wrapper.css — کادر بندی‌ها (.wrapper, .content-wrapper)
+│   ├── row-col.css — ترکیب ردیف و ستون به صورت جزئی‌تر (.row, .col, responsive columns)
+│   ├── media-queries.css — تعریف breakpointها و استایل مخصوص مدیاکوئری‌ها
+
+├── components/
+│   ├── form.css — اجزای فرم (input group, floating labels, validation)
+│   ├── button.css — دکمه‌ها (.btn-primary, .btn-outline, .btn-ghost, .btn-loading)
+│   ├── card.css — کارت‌ها (.card, .card-header, .card-body, .card-footer)
+│   ├── navbar.css — ناوبری (.navbar, .navbar-brand, .navbar-toggler, .navbar-collapse)
+│   ├── dropdown.css — دراپ‌داون‌ها (.dropdown, .dropdown-menu, .dropdown-item)
+│   ├── breadcrumb.css — مسیر‌یاب (.breadcrumb, .breadcrumb-item)
+│   ├── pagination.css — صفحه‌بندی (.pagination, .page-item, .page-link)
+│   ├── tabs.css — تب‌ها (.tab, .tab-content, .tab-pane)
+│   ├── alerts.css — پیام‌های هشدار (.alert-success, .alert-danger)
+│   ├── toast.css — نوتیفیکیشن‌های کوچک (.toast, .toast-container)
+│   ├── badge-tooltip-popover.css — بج‌ها و تولتیپ‌ها و پاپ‌آورها
+│   ├── modal.css — مدال‌ها (.modal, .modal-dialog, .modal-content)
+│   ├── accordion.css — آکاردئون‌ها (.accordion, .accordion-item)
+│   ├── carousel-slider.css — اسلایدر و کاروسل (.carousel, .slider-track)
+│   ├── table.css — جداول ریسپانسیو و دیزاین جداول خاص پروژه
+
+├── utilities/
+│   ├── text.css — تغییر رنگ و اندازه متن‌ها (.text-primary, .text-center)
+│   ├── background.css — پس‌زمینه‌ها (.bg-light, .bg-dark, .bg-gradient)
+│   ├── margin-padding.css — مارژین و پدینگ utility (.m-2, .p-4)
+│   ├── width-height.css — عرض و ارتفاع (.w-100, .h-auto)
+│   ├── display.css — نحوه نمایش (.d-none, .d-block, .d-flex)
+│   ├── alignment.css — چینش محتوا (.text-center, .align-items-center)
+│   ├── border-radius.css — گرد کردن گوشه‌ها (.rounded, .rounded-lg)
+│   ├── shadow.css — سایه‌ها (.shadow-sm, .shadow-lg)
+│   ├── opacity.css — کنترل شفافیت (.opacity-50, .opacity-100)
+
+├── state/
+│   ├── states.css — حالت‌های مختلف (.is-active, .is-disabled, .is-loading, .is-expanded)
+
+├── animations/
+│   ├── keyframes.css — تعریف انیمیشن‌های @keyframes (fadeIn, slideIn)
+│   ├── animation-classes.css — کلاس‌های اجرای انیمیشن (.animate-fade, .animate-slide)
+│   ├── transitions.css — مدیریت ترنزیشن‌ها (.transition-all, .transition-colors)
+
+├── accessibility/
+│   ├── accessibility.css — دسترسی‌پذیری (.sr-only, .skip-link, focus-visible, media queries for reduced motion)
+
+├── cms/
+│   ├── editor.css — استایل ویرایشگر محتوا (.editor-toolbar, .editor-content)
+│   ├── media-library.css — مدیریت فایل‌ها و تصاویر (.media-library, .media-item)
+│   ├── content-block.css — بلوک‌های محتوایی (.content-block, .content-section)
+
+├── ecommerce/
+│   ├── product-card.css — کارت محصول
+│   ├── price.css — استایل قیمت
+│   ├── cart.css — سبد خرید (.cart-summary, .add-to-cart)
+│   ├── checkout.css — مراحل پرداخت (.checkout-steps)
+│   ├── gallery.css — گالری تصاویر محصول (.product-gallery)
+│   ├── product-variants.css — تنوعات محصول (رنگ، سایز)
+
+├── dashboard/
+│   ├── dashboard-layout.css — چیدمان داشبورد
+│   ├── sidebar.css — نوار کناری داشبورد
+│   ├── stat-card.css — کارت‌های آماری داشبورد
+│   ├── data-grid.css — گرید داده‌ها
+│   ├── user-avatar.css — آواتار کاربران
+│   ├── activity-log.css — لاگ فعالیت‌ها
+
+├── blog/
+│   ├── article.css — استایل مقالات (.article-header, .article-content)
+│   ├── author-bio.css — معرفی نویسنده (.author-bio)
+│   ├── related-posts.css — مطالب مرتبط (.related-posts)
+│   ├── comments.css — بخش نظرات (.comment-section)
+│   ├── tag-cloud.css — ابر برچسب‌ها (.tag-cloud)
+
+├── optimization/
+│   ├── lazy-load.css — استایل لود تنبل
+│   ├── skeleton.css — اسکلتون‌های لودینگ (.skeleton-loader)
+│   ├── critical-css.css — استایل‌های ضروری برای رندر اولیه
+│   ├── print.css — استایل‌های مخصوص چاپ (.print-only, .no-print)
+
+├── interactive/
+│   ├── drag-drop.css — درگ اند دراپ
+│   ├── sortable-list.css — لیست‌های مرتب شونده
+│   ├── resizable.css — تغییر سایز المنت‌ها
+│   ├── tour.css — تور تعاملی (.interactive-tour)
+│   ├── real-time-update.css — آپدیت‌های لحظه‌ای
+│   ├── context-menu.css — منوی راست کلیک سفارشی
+│   ├── hotkeys.css — کلیدهای میانبر صفحه کلید
+
+└── main.css
+
+```
+> فایل اصلی که همه فایل‌های بالا را به ترتیب @import می‌کند.
+
+
+
+
+---
+
+دوست داری همینو توی یه فایل مارک‌داون (README.md) هم آماده کنم که راحت تو پروژه بزاری؟
+اگر خواستی، بگو تا آماده کنم!
+
 
 ---
 
